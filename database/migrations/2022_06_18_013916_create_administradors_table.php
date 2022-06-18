@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('direccion');
             $table->integer('clave');
             $table->string('correo_institucional');
-            $table->foreignId("id_curso")->constrained("cursos");
         });
     }
 
