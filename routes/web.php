@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\MatriculaController;
+use App\Http\Controllers\ProfesorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +22,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/profesor/mostrar',[ProfesorController::class,'mostrar'])->name("mostrar.profesors");
+Route::get('/profesor/registrar',[ProfesorController::class,'profesorForm'])->name("formulario.profesor");;
+Route::post('/profesor/registrar',[ProfesorController::class,'procesarForm'])->name("procesar.profesor");
 
 
 

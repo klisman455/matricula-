@@ -15,9 +15,9 @@
             <input type="text" name="" id="" value="" placeholder="ingrese id malla curricular" class="form-control">
             <input type="text" name="" id="" value="" placeholder="ingrese id de la  carrera" class="form-control">
 
-
+            <input type="submit" value="guardar" class="btn btn-primary">
         </div>
-        <input type="submit" value="guardar" class="btn btn-primary">
+
 
     </form>
     <br>

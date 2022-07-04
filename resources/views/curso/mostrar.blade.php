@@ -1,16 +1,18 @@
 @extends('layouts.app')
 @section('content')
     <table>
-        <thead>
-        <th>
-       hola
-        </th>
-        </thead>
-        <tbody>
         <tr>
-            <td> </td>
+            <th>nombre</th>
+            <th></th>
+            <th></th>
+            <th></th>
         </tr>
-        </tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
     </table>
 
 @endsection
