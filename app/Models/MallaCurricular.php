@@ -9,4 +9,5 @@ use Illuminate\Database\Eloquent\Model;
 class MallaCurricular extends Model
 {
     use HasFactory;
+    public $timestamps =false;
 }

@@ -35,17 +35,60 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         @auth
+                            <div>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/matricula/registrar">registrar matricula</a>
+                                <a class="nav-link dropdown-toggle" href="/profesor/registrar" role="button" data-bs-toggle="dropdown"> profesor</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/profesor/registrar">registrar profesor</a></li>
+                                    <li><a class="dropdown-item" href="/profesor/mostrar">mostrar profesores</a></li>
+                                </ul>
                             </li>
+                            </div>
+                            <div>
+                                <div>
+                                    <li class="nav-item">
+                                        <a class="nav-link dropdown-toggle" href="/profesor/registrar" role="button" data-bs-toggle="dropdown">matricula</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/matricula/registrar">registrar matricula</a></li>
+                                            <li><a class="dropdown-item" href="/matricula/mostrar">mostrar matricula</a></li>
+                                        </ul>
+                                    </li>
+                            </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <li class="nav-item">
+                                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">malla</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/malla/registrar">registrar malla</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <li class="nav-item">
+                                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">carrera</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/carrera/registrar">registrar carrera</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <li class="nav-item">
+                                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">curso</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/curso/registrar">registrar y designar profesor</a></li>
+                                            <li><a class="dropdown-item" href="/curso/mostrar">mostrar curso</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                            </div>
+
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="">designar profesor</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/curso/registrar">registro de malla curricular</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="">ver horario de matricula</a>
+                                <a class="nav-link active" aria-current="page" href="">ver_hora..</a>
                             </li>
                         @endauth
                     </ul>
@@ -54,13 +97,13 @@
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
-                          {{--  @if (Route::has('login'))
+                        {{-- @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
-                            @endif--}}
+                            @endif
 
-                            {{--@if (Route::has('register'))
+                            @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>

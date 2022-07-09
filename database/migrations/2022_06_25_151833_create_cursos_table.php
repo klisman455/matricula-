@@ -23,7 +23,7 @@ return new class extends Migration
             $table->foreignId("id_profesor")->constrained("profesors");
             $table->foreignId("id_mallacurricular")->constrained("malla_curriculars");
             $table->foreignId("id_carrera")->constrained("Carreras");
-            $table->foreignId("id_administrador")->constrained("administradors");
+
         });
     }
 

@@ -15,8 +15,7 @@ return new class extends Migration
     {
         Schema::create('matriculas', function (Blueprint $table) {
             $table->id();
-            $table->date('fecha');
-            $table->time('hora');
+            $table->string('fecha');
 
             $table->foreignId("id_curso")->constrained("cursos");
             $table->foreignId("id_user")->constrained("users");

@@ -26,7 +26,7 @@ class ProfesorController extends Controller
         $profesor->clave =$request->input("clave");
         $profesor->correo_institucional = $request->input("correo_institucional");
         $profesor->save();
-        return redirect(Route("/profesores/mostrar"));
+        return "guardrado";
 
     }
 

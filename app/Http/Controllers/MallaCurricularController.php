@@ -10,18 +10,16 @@ use Illuminate\Support\Facades\Hash;
 
 class MallaCurricularController extends Controller
 {
-    public function direccionForm(){
-        return view('usuario.direccion');
+
+    public function mallaForm(){
+        return view('malla.registrar');
     }
-    public function procesarForm(Request $request){
-        $request->validate([
-            "direccion"=>"required"
-        ]);
-        $user = User::find(Auth::id());
-        $user->direccion =$request->input("direccion");
-        $user->remember_token = Hash::make("hola");
-        $user->save();
-        return redirect(Route("home"));
+    public function procesarrForm(Request $request){
+        $mallacurricular= new MallaCurricular();
+        $mallacurricular->estado_curso= $request->input("estado_curso");
+        $mallacurricular->estado= $request->input("estado");
+        $mallacurricular->save();
+        return "guardado";
 
     }
 }

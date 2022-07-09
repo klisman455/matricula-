@@ -5,7 +5,7 @@
     <h>mostrar profesores</h>
 
 
-    @foreach ($profesors as $profesor)
+
         <p>
         <table style="border: 1px solid">
             <tr>
@@ -14,15 +14,17 @@
                 <th>direcion</th>
                 <th>correo institucional</th>
             </tr>
+            @foreach ($profesors as $profesor)
             <tr>
-                <td>{{$profesor["nombres"]}}</td>
-                <td>{{$profesor["apellidos"]}}</td>
-                <td>{{$profesor["direccion"]}}</td>
-                <td>{{$profesor["correo_institucional"]}}</td>
+                <td>{{$profesor["nombres"]}}&nbsp</td>
+                <td>{{$profesor["apellidos"]}}&nbsp</td>
+                <td>{{$profesor["direccion"]}}&nbsp</td>
+                <td>{{$profesor["correo_institucional"]}}&nbsp</td>
 
             </tr>
+        @endforeach
         </table>
         </p>
-    @endforeach
+
 
 @endsection
